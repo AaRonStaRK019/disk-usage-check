@@ -24,6 +24,6 @@ mkdir -p "$destination"
 timestamp=$(date +"%Y%m%d%H%M%S")
 
 # create tar archive and move to the destination directory
-tar -cf "$destination/backup_$timestamp.tar" -C "$(dirname "$src")" "$(basename "$src")"
+tar -cf "$destination/$(basename "$src")_$timestamp.tar" -C "$(dirname "$src")" "$(basename "$src")"
 
 echo "Backup completed successfully. Archive saved to $destination/backup_$timestamp.tar"
