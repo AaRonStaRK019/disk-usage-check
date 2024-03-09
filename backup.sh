@@ -26,6 +26,6 @@ timestamp=$(date +"%Y%m%d%H%M%S")
 
 
 # Compress the source directory as a tar archive and move to the destination directory
-tar -czf "$destination/backup_$timestamp.tar.gz" -C "$(dirname "$src")" "$(basename "$src")"
+tar -cf "$destination/backup_$timestamp.tar" -C "$(dirname "$src")" "$(basename "$src")"
 
-echo "Backup completed successfully. Archive saved to $destination/backup_$timestamp.tar.gz"
+echo "Backup completed successfully. Archive saved to $destination/backup_$timestamp.tar"
