@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# a script to backupa chosen directory as a tar archive
+# a script to back up a chosen directory as a tar archive
 
 # check if two arguments are provided
 if [ "$#" -ne 2 ]; then
@@ -26,4 +26,4 @@ timestamp=$(date +"%Y%m%d%H%M%S")
 # create tar archive and move to the destination directory
 tar -cf "$destination/$(basename "$src")_$timestamp.tar" -C "$(dirname "$src")" "$(basename "$src")"
 
-echo "Backup completed successfully. Archive saved to $destination/backup_$timestamp.tar"
+echo "Backup completed successfully. Archive saved to $destination/$(basename "$src")_$timestamp.tar"
